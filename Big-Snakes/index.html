@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOM Inspired Page</title>
+    <style>
+        @font-face {
+            font-family: 'DoomFont';
+            src: url('https://www.dafont.com/dl/?f=doom') format('truetype');
+        }
+
+        body {
+            background: url('https://media.wired.com/photos/59270a18cfe0d93c47432287/master/pass/Doom_1280w.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ff0000;
+            text-align: center;
+            font-family: 'DoomFont', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .doom-button {
+            font-size: 2rem;
+            padding: 15px 30px;
+            background: red;
+            border: 3px solid black;
+            color: yellow;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px yellow;
+            transition: 0.3s;
+        }
+
+        .doom-button:hover {
+            background: darkred;
+            box-shadow: 0 0 40px yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="index2.html">
+        <h1>Welcome to DOOM</h1>
+        <button class="doom-button" onclick="playSound()">Start Game</button>
+    </a>
+
+    <audio id="doomSound">
+        <source src="doom_at_dooms_gate.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function playSound() {
+            document.getElementById("doomSound").play();
+        }
+    </script>
+</body>
+</html>
